@@ -1,0 +1,39 @@
+{
+  "name": "PipeBird",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#1f93ff",
+    "light": "#45a5ff",
+    "dark": "#1174d1",
+    "ultraLight": "#87c5ff",
+    "ultraDark": "#095fb0"
+  },
+  "topbarLinks": [
+    {
+      "name": "Example Link",
+      "url": "https://google.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started Example",
+    "url": "https://google.com"
+  },
+  "anchors": [
+    {
+      "name": "Writer",
+      "icon": "pen-nib",
+      "color": "#f59f0b",
+      "url": "writer"
+    }
+  ],
+  "navigation": [{}],
+  "footerSocials": {
+    "github": "https://github.com/mintlify",
+    "discord": "https://discord.gg/MPNgtSZkgK",
+    "twitter": "https://twitter.com/mintlify"
+  }
+}
