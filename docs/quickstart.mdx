@@ -1,0 +1,89 @@
+---
+title: "Quickstart"
+description: "How to quickly deploy Pipebird on your stack"
+---
+
+[Click here](https://www.loom.com/share/c7a7e4b4e57c4015b533fd754c510b2e) for a demo of Pipebird.
+
+#### We support three deployment methods.
+
+1. **VPC Deployment** enables you to deploy a Pipebird box inside your pre-existing VPC.
+2. **Default Deployment** will deploy a public Pipebird box inside your default VPC.
+3. **Local Deployment** will deploy to your local machine.
+
+We recommend **Default Deployment** if your app is not yet running within AWS.
+
+#### Obtain a license key
+
+Sign up to [get a license key here](https://my.pipebird.com) \- you'll need to enter this key into the Quick Setup flow later in the process.
+
+#### VPC Deployment
+
+To deploy within an existing VPC click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3-external-1.amazonaws.com/cf-templates-lglxt2zjl1jo-us-east-1/pipebird%5Fexisting%5Fcloud%5Fdeploy&stackName=pipebird&param%5FlicenseKey=lk%5Fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff).
+
+#### Default Deployment
+
+For our default deployment strategy we will spin up Pipebird within a default subnet. In case you don't have a default subnet, follow the below steps to create one.
+
+First, install the aws-cli
+
+```
+brew install awscli 
+
+```
+
+Next, configure your aws account locally
+
+```
+aws configure
+
+```
+
+Then, create a default subnet
+
+```
+aws ec2 create-default-subnet --availability-zone us-east-1a
+
+```
+
+#### Finally, to deploy Pipebird simply click [here](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3-external-1.amazonaws.com/cf-templates-lglxt2zjl1jo-us-east-1/pipebird%5Fsimple%5Fdeploy&stackName=pipebird&param%5FlicenseKey=lk%5Fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff).
+
+Pipebird's server will be running on port 3000 of the newly created instance. You can find the code for the server in your absolute path: /pipebird.
+
+#### Get secret key
+
+After creating your EC2 instance, you will need to use the following command to create your pipebird-secret-key:
+
+```
+scp -i <ec2-keypair>.pem [email protected]<pipebird-instance-ip>:~/pipebird/.env pipebird-secret-key && cat pipebird-secret-key | grep "^SECRET_KEY" > pipebird-secret-key
+
+```
+
+You can use this secret key bearer token defined in this file to make authorized requests against your Pipebird instance.
+
+![2056](https://files.readme.io/0126cc3-Screen_Shot_2022-08-30_at_11.52.31_AM.png "Screen Shot 2022-08-30 at 11.52.31 AM.png")![2056](https://files.readme.io/0126cc3-Screen_Shot_2022-08-30_at_11.52.31_AM.png "Click to close...") 
+
+#### Troubleshooting
+
+Check your CloudFormation stack and CloudTrail logs for details on why a build may have failed.
+
+Still having issues? Feel free to shoot us an email at [\[email protected\]](/cdn-cgi/l/email-protection)
+
+#### Local Deploy
+
+> ### 📘
+> 
+> Note
+> 
+> * Required environment variables are specified in `lib/env.ts` and `.env.example` \- make sure to fill out `DATABASE_URL` before attempting to run migrations.
+> * Pipebird requires Node >= 16, a running Postgres instance, and a running Redis serverr to function.
+
+You can also run Pipebird locally after cloning the repo by running the following:
+
+```
+npm install
+npm run build
+npx prisma migrate deploy
+npm start
+
+```

@@ -24,16 +24,94 @@
   },
   "anchors": [
     {
-      "name": "Writer",
-      "icon": "pen-nib",
+      "name": "API Reference",
+      "icon": "rectangle-terminal",
       "color": "#f59f0b",
-      "url": "writer"
+      "url": "reference"
     }
   ],
-  "navigation": [{}],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "welcome-to-pipebird",
+        "quickstart",
+        "overview",
+        "contributions"
+      ]
+    },
+    {
+      "group": "Sources",
+      "pages": [
+        "reference/sources/list-sources",
+        "reference/sources/post-sources",
+        "reference/sources/get-source-by-id",
+        "reference/sources/delete-sources-source_id",
+        "reference/sources/patch-source-sourceid"
+      ]
+    },
+    {
+      "group": "Views",
+      "pages": [
+        "reference/views/list-views",
+        "reference/views/post-views",
+        "reference/views/get-views-view_id",
+        "reference/views/delete-views-view_id"
+      ]
+    },
+    {
+      "group": "Configurations",
+      "pages": [
+        "reference/configurations/list-configs",
+        "reference/configurations/post-configs",
+        "reference/configurations/get-configuration-by-id",
+        "reference/configurations/delete-configurations-configuration_id"
+      ]
+    },
+    {
+      "group": "Destinations",
+      "pages": [
+        "reference/destinations/list-destinations",
+        "reference/destinations/post-destinations",
+        "reference/destinations/get-destination-by-id",
+        "reference/destinations/delete-destinations-destination_id"
+      ]
+    },
+    {
+      "group": "Shares",
+      "pages": [
+        "reference/shares/list-shares",
+        "reference/shares/post-shares",
+        "reference/shares/get-share-by-id",
+        "reference/shares/patch-shares-shareid",
+        "reference/shares/delete-shares-shareid"
+      ]
+    },
+    {
+      "group": "Transfers",
+      "pages": [
+        "reference/transfers/post-transfers",
+        "reference/transfers/list-transfers",
+        "reference/transfers/get-destinations-destination_id-transfers-transfer_id",
+        "reference/transfers/delete-transfers-transfer_id"
+      ]
+    },
+    {
+      "group": "Logs",
+      "pages": ["reference/logs/list-logs", "reference/logs/get-logs-log_id"]
+    },
+    {
+      "group": "Webhooks",
+      "pages": [
+        "reference/webhooks/list-webhooks",
+        "reference/webhooks/post-webhooks",
+        "reference/webhooks/delete-webhooks"
+      ]
+    }
+  ],
   "footerSocials": {
-    "github": "https://github.com/mintlify",
-    "discord": "https://discord.gg/MPNgtSZkgK",
-    "twitter": "https://twitter.com/mintlify"
+    "twitter": "https://twitter.com/getpipebird",
+    "linkedin": "https://linkedin.com/company/pipebird",
+    "github": "https://github.com/Realize-Engineering/pipebird"
   }
 }
