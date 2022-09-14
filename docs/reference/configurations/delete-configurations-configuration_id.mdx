@@ -1,5 +1,22 @@
 ---
 title: "Delete configuration"
-description: "Delete configuration. Cannot delete configuration if transfer is ongoing."
+description:
+  "Delete configuration. Cannot delete configuration if transfer is ongoing."
+api: "DELETE http://localhost:3000/configurations/{configuration_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<Param path="configuration_id" type="string" required>
+  The id of this configuration object
+</Param>
+
+<RequestExample>
+
+```bash Example Request
+curl --request DELETE \
+     --url http://localhost:3000/configurations/configuration_id
+```
+
+</RequestExample>

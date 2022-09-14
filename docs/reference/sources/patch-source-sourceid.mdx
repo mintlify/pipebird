@@ -1,5 +1,40 @@
 ---
 title: "Update source"
 description: "Update source."
+api: "PATCH http://localhost:3000/sources/{source_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<Param path="source_id" type="string" required>
+  The id of this data source
+</Param>
+
+### Body Params
+
+<Param body="nickname" type="string"></Param>
+
+<Param body="sourceType" type="string" required></Param>
+
+<Param body="host" type="string"></Param>
+
+<Param body="port" type="string" required></Param>
+
+<Param body="schema" type="string"></Param>
+
+<Param body="database" type="string" required></Param>
+
+<Param body="username" type="string" required></Param>
+
+<Param body="password" type="string"></Param>
+
+<RequestExample>
+
+```bash Example Request
+curl --request PATCH \
+     --url http://localhost:3000/sources/source_id \
+     --header 'Content-Type: application/json'
+```
+
+</RequestExample>

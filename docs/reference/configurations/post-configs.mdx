@@ -1,5 +1,46 @@
 ---
 title: "Create configuration"
-description: "Create a new transformation configuration to be applied on some given view"
+description:
+  "Create a new transformation configuration to be applied on some given view"
+api: "POST http://localhost:3000/configurations"
+auth: "bearer"
 ---
 
+### Body Params
+
+<Param body="viewId" type="number" required></Param>
+
+<Param body="columns" type="array of objects"></Param>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="viewId" type="number"></ResponseField>
+
+<ResponseField name="columns" type="array of objects">
+<Expandable title="columns properties">
+
+<ResponseField name="nameInSource" type="string"></ResponseField>
+
+<ResponseField name="nameInDestination" type="string"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --request POST \
+     --url http://localhost:3000/configurations \
+     --header 'Accept: application/json' \
+     --header 'Content-Type: application/json'
+```
+
+</RequestExample>

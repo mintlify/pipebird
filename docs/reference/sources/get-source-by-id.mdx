@@ -1,5 +1,42 @@
 ---
 title: "Get source"
 description: "Get data source info"
+api: "GET http://localhost:3000/sources/{source_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<Param path="source_id" type="string" required>
+  The id of this data source
+</Param>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="schema" type="string"></ResponseField>
+
+<ResponseField name="database" type="string"></ResponseField>
+
+<ResponseField name="status" type="string"></ResponseField>
+
+<ResponseField name="sourceType" type="number"></ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --request GET \
+     --url http://localhost:3000/sources/source_id \
+     --header 'Accept: application/json'
+```
+
+</RequestExample>

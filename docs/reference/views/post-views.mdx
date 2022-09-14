@@ -1,5 +1,49 @@
 ---
 title: "Create view"
 description: "Create a new view for a given source"
+api: "POST http://localhost:3000/views"
+auth: "bearer"
 ---
 
+### Body Params
+
+<Param body="sourceId" type="number" required></Param>
+
+<Param body="tableName" type="string" required></Param>
+
+<Param body="columns" type="array of objects"></Param>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="id" type="number"></ResponseField>
+
+<ResponseField name="sourceId" type="number"></ResponseField>
+
+<ResponseField name="tableName" type="string"></ResponseField>
+
+<ResponseField name="columns" type="array of objects">
+<Expandable title="columns properties">
+
+<ResponseField name="id" type="number"></ResponseField>
+
+<ResponseField name="name" type="string"></ResponseField>
+
+<ResponseField name="dataType" type="string"></ResponseField>
+</Expandable>
+</ResponseField>
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --request POST \
+     --url http://localhost:3000/views \
+     --header 'Accept: application/json' \
+     --header 'Content-Type: application/json'
+```
+
+</RequestExample>

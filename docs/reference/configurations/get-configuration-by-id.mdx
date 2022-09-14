@@ -1,5 +1,44 @@
 ---
 title: "Get configuration"
 description: "Get customer defined transformation(s) configuration set"
+api: "GET http://localhost:3000/configurations/{configuration_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<Param path="configuration_id" type="string" required>
+  The id of this configuration object
+</Param>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="viewId" type="number"></ResponseField>
+
+<ResponseField name="columns" type="array of objects">
+<Expandable title="columns properties">
+
+<ResponseField name="nameInSource" type="string"></ResponseField>
+
+<ResponseField name="nameInDestination" type="string"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --request GET \
+     --url http://localhost:3000/configurations/configuration_id \
+     --header 'Accept: application/json'
+```
+
+</RequestExample>

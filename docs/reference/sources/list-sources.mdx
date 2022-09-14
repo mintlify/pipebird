@@ -5,13 +5,34 @@ api: "GET http://localhost:3000/sources"
 auth: "bearer"
 ---
 
+## Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="schema" type="string"></ResponseField>
+
+<ResponseField name="database" type="string"></ResponseField>
+
+<ResponseField name="status" type="string">
+  Either `REACHABLE` or `UNREACHABLE`
+</ResponseField>
+
+<ResponseField name="sourceType" type="string">
+  `MYSQL`, `POSTGRES`, `SNOWFLAKE`, `REDSHIFT`, `BIGQUERY`
+</ResponseField>
+
+</Expandable>
+</ResponseField>
+
 <RequestExample>
 
 ```bash Example Request
 curl --request GET \
      --url http://localhost:3000/sources \
      --header 'Accept: application/json'
-
 ```
 
 </RequestExample>

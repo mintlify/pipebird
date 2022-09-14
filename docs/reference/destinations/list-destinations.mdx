@@ -1,5 +1,40 @@
 ---
 title: "List destinations"
 description: "A list of all the output destinations to share data from"
+api: "GET http://localhost:3000/destinations"
+auth: "bearer"
 ---
 
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<Expandable title="columns properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="destinationType" type="string">
+
+`SNOWFLAKE` `PROVISIONED_S3` `REDSHIFT`
+
+</ResponseField>
+
+<ResponseField name="warehouse" type="string"></ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --request GET \
+     --url http://localhost:3000/destinations \
+     --header 'Accept: application/json'
+```
+
+</RequestExample>

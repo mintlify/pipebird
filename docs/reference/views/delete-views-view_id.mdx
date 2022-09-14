@@ -1,5 +1,22 @@
 ---
 title: "Delete view"
-description: "Delete view. You cannot delete a view if there is an ongoing transfer."
+description:
+  "Delete view. You cannot delete a view if there is an ongoing transfer."
+api: "DELETE http://localhost:3000/views/{viewId}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<Param path="viewId" type="string" required>
+  The id of this view
+</Param>
+
+<RequestExample>
+
+```bash Example Request
+curl --request DELETE \
+     --url http://localhost:3000/views/viewId
+```
+
+</RequestExample>
