@@ -1,5 +1,24 @@
 ---
 title: "Delete share"
 description: "Delete share. Cannot delete share if transfer in progress."
+api: "DELETE http://localhost:3000/shares/{shareId}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<ParamField path="shareId" type="string" required>
+  The id for this share object
+</ParamField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.deleteSharesShareId({shareId: 'shareId'})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

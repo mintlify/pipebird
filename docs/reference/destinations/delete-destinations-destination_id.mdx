@@ -1,5 +1,25 @@
 ---
 title: "Delete destination"
-description: "Delete destination. Cannot delete destination if transfer in progress."
+description:
+  "Delete destination. Cannot delete destination if transfer in progress."
+api: "DELETE http://localhost:3000/destinations/{destination_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<ParamField path="destination_id" type="string" required>
+  The id for this destination object
+</ParamField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.deleteDestinationsDestination_id({destination_id: 'destination_id'})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

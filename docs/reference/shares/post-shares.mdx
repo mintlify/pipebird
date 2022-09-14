@@ -1,5 +1,52 @@
 ---
 title: "Create share"
-description: "Create a new share on behalf of a customer according to a set of configurations"
+description:
+  "Create a new share on behalf of a customer according to a set of
+  configurations"
+api: "POST http://localhost:3000/shares"
+auth: "bearer"
 ---
 
+### Body Params
+
+<ParamField body="nickname" type="string"></ParamField>
+
+<ParamField body="tenantId" type="string" required></ParamField>
+
+<ParamField body="destinationId" type="string" required></ParamField>
+
+<ParamField body="configurationId" type="string" required></ParamField>
+
+<ParamField body="warehouseID" type="string" required></ParamField>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="configurationId" type="number"></ResponseField>
+
+<ResponseField name="tenantID" type="string"></ResponseField>
+
+<ResponseField name="warehouseId" type="string"></ResponseField>
+
+<ResponseField name="destinationID" type="string"></ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.postShares()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

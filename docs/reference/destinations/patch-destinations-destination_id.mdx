@@ -1,5 +1,50 @@
 ---
 title: "Update destination"
 description: "Update destination."
+api: "PATCH http://localhost:3000/destinations/{destination_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<ParamField path="destination_id" type="string" required>
+  The id for this destination object
+</ParamField>
+
+### Body Params
+
+**Database**
+
+<ParamField body="destinationType" type="string" required></ParamField>
+
+<ParamField body="host" type="string" required></ParamField>
+
+<ParamField body="port" type="number" required></ParamField>
+
+<ParamField body="schema" type="string" required></ParamField>
+
+<ParamField body="database" type="string" required></ParamField>
+
+<ParamField body="username" type="string" required></ParamField>
+
+<ParamField body="password" type="string" required></ParamField>
+
+<ParamField body="nickname" type="string" required></ParamField>
+
+**Object Store**
+
+<ParamField body="nickname" type="string" required></ParamField>
+
+<ParamField body="destinationType" type="string" required></ParamField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.patchDestinationsDestination_id({destinationType: 'PROVISIONED_S3'}, {destination_id: 'destination_id'})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

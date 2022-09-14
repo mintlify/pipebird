@@ -7,9 +7,9 @@ auth: "bearer"
 
 ### Path Params
 
-<Param path="source_id" type="string" required>
+<ParamField path="source_id" type="string" required>
   The id of this data source
-</Param>
+</ParamField>
 
 ### Response
 
@@ -22,9 +22,17 @@ auth: "bearer"
 
 <ResponseField name="database" type="string"></ResponseField>
 
-<ResponseField name="status" type="string"></ResponseField>
+<ResponseField name="status" type="string">
 
-<ResponseField name="sourceType" type="number"></ResponseField>
+`REACHABLE` `UNREACHABLE`
+
+</ResponseField>
+
+<ResponseField name="sourceType" type="number">
+
+`MYSQL` `POSTGRES` `SNOWFLAKE` `REDSHIFT` `BIGQUERY`
+
+</ResponseField>
 
 <ResponseField name="id" type="number"></ResponseField>
 

@@ -1,5 +1,44 @@
 ---
 title: "Get destination"
 description: "Get destination by id"
+api: "GET http://localhost:3000/destinations/{destination_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<ParamField path="destination_id" type="string" required>
+  The id for this destination object
+</ParamField>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="destinationType" type="string">
+
+`SNOWFLAKE` `PROVISIONED_S3` `REDSHIFT`
+
+</ResponseField>
+
+<ResponseField name="warehouse" type="string"></ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.getDestinationById({destination_id: 'destination_id'})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

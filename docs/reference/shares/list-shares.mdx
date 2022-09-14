@@ -1,5 +1,38 @@
 ---
 title: "List shares"
 description: "A list of all the shares created by customers"
+api: "GET http://localhost:3000/shares"
+auth: "bearer"
 ---
 
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="nickname" type="string"></ResponseField>
+
+<ResponseField name="configurationId" type="number"></ResponseField>
+
+<ResponseField name="tenantID" type="string"></ResponseField>
+
+<ResponseField name="warehouseId" type="string"></ResponseField>
+
+<ResponseField name="destinationID" type="string"></ResponseField>
+
+<ResponseField name="id" type="number"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.listShares()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

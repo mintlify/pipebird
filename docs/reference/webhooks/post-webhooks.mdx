@@ -1,5 +1,38 @@
 ---
 title: "Create webhook"
-description: "Replaces any existing webhooks. An HMAC-SHA256 hash will be included in the X-Pipebird-Signature header with all webhook requests and can be verified with the webhook secret returned from this endpoint. You must store the secret because you will not be able to read it later."
+description:
+  "Replaces any existing webhooks. An HMAC-SHA256 hash will be included in the
+  X-Pipebird-Signature header with all webhook requests and can be verified with
+  the webhook secret returned from this endpoint. You must store the secret
+  because you will not be able to read it later."
+api: "POST http://localhost:3000/webhooks"
+auth: "bearer"
 ---
 
+### Body Params
+
+<ParamField body="url" type="string" required>
+
+</ParamField>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="webhookSecret" type="string" request></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.postWebhooks()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

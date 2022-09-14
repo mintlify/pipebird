@@ -1,5 +1,42 @@
 ---
 title: "Get log"
 description: "Get a log by id."
+api: "GET http://localhost:3000/logs/{log_id}"
+auth: "bearer"
 ---
 
+### Path Params
+
+<ParamField path="log_id" type="string" required>
+  The id of this log.
+</ParamField>
+
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="id" type="number"></ResponseField>
+
+<ResponseField name="eventAction" type="string"></ResponseField>
+
+<ResponseField name="eventSource" type="string"></ResponseField>
+
+<ResponseField name="eventId" type="number"></ResponseField>
+
+<ResponseField name="meta" type="string"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.getLogsLog_id({log_id: 'log_id'})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

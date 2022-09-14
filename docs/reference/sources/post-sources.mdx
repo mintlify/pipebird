@@ -7,19 +7,21 @@ auth: "bearer"
 
 ### Body Params
 
-<Param body="nickname" type="string"></Param>
+<ParamField body="nickname" type="string"></ParamField>
 
-<Param body="sourceType" type="string" required></Param>
+<ParamField body="sourceType" type="string" required></ParamField>
 
-<Param body="port" type="string" required></Param>
+<ParamField body="host" types="string" required></ParamField>
 
-<Param body="schema" type="string"></Param>
+<ParamField body="port" type="string" required></ParamField>
 
-<Param body="database" type="string" required></Param>
+<ParamField body="schema" type="string"></ParamField>
 
-<Param body="username" type="string" required></Param>
+<ParamField body="database" type="string" required></ParamField>
 
-<Param body="password" type="string"></Param>
+<ParamField body="username" type="string" required></ParamField>
+
+<ParamField body="password" type="string"></ParamField>
 
 ### Response
 
@@ -32,9 +34,17 @@ auth: "bearer"
 
 <ResponseField name="database" type="string"></ResponseField>
 
-<ResponseField name="status" type="string"></ResponseField>
+<ResponseField name="status" type="string">
 
-<ResponseField name="sourceType" type="number"></ResponseField>
+`REACHABLE` `UNREACHABLE`
+
+</ResponseField>
+
+<ResponseField name="sourceType" type="number">
+
+`MYSQL` `POSTGRES` `SNOWFLAKE` `REDSHIFT` `BIGQUERY`
+
+</ResponseField>
 
 <ResponseField name="id" type="number"></ResponseField>
 

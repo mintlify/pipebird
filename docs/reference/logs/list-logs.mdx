@@ -1,5 +1,36 @@
 ---
 title: "List logs"
 description: "List event logs"
+api: "GET http://localhost:3000/logs"
+auth: "bearer"
 ---
 
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="id" type="number"></ResponseField>
+
+<ResponseField name="eventAction" type="string"></ResponseField>
+
+<ResponseField name="eventSource" type="string"></ResponseField>
+
+<ResponseField name="eventId" type="number"></ResponseField>
+
+<ResponseField name="meta" type="string"></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.listLogs()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

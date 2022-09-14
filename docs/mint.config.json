@@ -85,7 +85,7 @@
         "reference/shares/post-shares",
         "reference/shares/get-share-by-id",
         "reference/shares/patch-shares-shareid",
-        "reference/shares/delete-shares-shareid"
+        "reference/shares/delete-share"
       ]
     },
     {

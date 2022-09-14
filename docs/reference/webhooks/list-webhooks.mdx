@@ -1,5 +1,32 @@
 ---
 title: "List webhooks"
-description: "Get all registered webhooks. Currently, you can have a maximum of one webhook set. We will enqueue webhook events whenever transfer states change."
+description:
+  "Get all registered webhooks. Currently, you can have a maximum of one webhook
+  set. We will enqueue webhook events whenever transfer states change."
+api: "GET http://localhost:3000/webhooks"
+auth: "bearer"
 ---
 
+### Response
+
+<ResponseField name="content" type="array of objects">
+<Expandable title="object properties">
+
+<ResponseField name="url" type="string" required></ResponseField>
+
+<ResponseField name="id" type="number" required></ResponseField>
+
+</Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+const sdk = require('api')('@pipebird/v1.0#1ae9zul7zbunn1');
+
+sdk.listWebhooks()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+```
+
+</RequestExample>

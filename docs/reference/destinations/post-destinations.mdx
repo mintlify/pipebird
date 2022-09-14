@@ -1,7 +1,7 @@
 ---
 title: "Create destination"
 description: "Create a new destination to initialize shares from"
-api: ""
+api: "POST http://localhost:3000/destinations"
 auth: "bearer"
 ---
 
@@ -9,27 +9,27 @@ auth: "bearer"
 
 **Database**
 
-<Param body="destinationType" type="string" required></Param>
+<ParamField body="destinationType" type="string" required></ParamField>
 
-<Param body="host" type="string" required></Param>
+<ParamField body="host" type="string" required></ParamField>
 
-<Param body="port" type="number" required></Param>
+<ParamField body="port" type="number" required></ParamField>
 
-<Param body="schema" type="string" required></Param>
+<ParamField body="schema" type="string" required></ParamField>
 
-<Param body="database" type="string" required></Param>
+<ParamField body="database" type="string" required></ParamField>
 
-<Param body="username" type="string" required></Param>
+<ParamField body="username" type="string" required></ParamField>
 
-<Param body="password" type="string" required></Param>
+<ParamField body="password" type="string" required></ParamField>
 
-<Param body="nickname" type="string" required></Param>
+<ParamField body="nickname" type="string" required></ParamField>
 
 **Object Store**
 
-<Param body="nickname" type="string" required></Param>
+<ParamField body="nickname" type="string" required></ParamField>
 
-<Param body="destinationType" type="string" required></Param>
+<ParamField body="destinationType" type="string" required></ParamField>
 
 ### Response
 
@@ -39,7 +39,9 @@ auth: "bearer"
 <ResponseField name="nickname" type="string"></ResponseField>
 
 <ResponseField name="destinationType" type="string">
-  `SNOWFLAKE` `PROVISIONED_S3` `REDSHIFT`
+
+`SNOWFLAKE` `PROVISIONED_S3` `REDSHIFT`
+
 </ResponseField>
 
 <ResponseField name="warehouse" type="string"></ResponseField>
