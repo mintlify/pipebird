@@ -85,16 +85,6 @@
       ]
     },
     {
-      "group": "Shares",
-      "pages": [
-        "reference/shares/list-shares",
-        "reference/shares/post-shares",
-        "reference/shares/get-share-by-id",
-        "reference/shares/patch-shares-shareid",
-        "reference/shares/delete-share"
-      ]
-    },
-    {
       "group": "Transfers",
       "pages": [
         "reference/transfers/post-transfers",
