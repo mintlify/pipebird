@@ -1,10 +1,10 @@
 {
   "name": "PipeBird",
   "logo": {
-    "light": "/logo/pipebird-logo-light.png",
-    "dark": "/logo/pipebird-logo-light.png"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#1f93ff",
     "light": "#45a5ff",
