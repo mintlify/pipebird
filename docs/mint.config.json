@@ -14,8 +14,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Contact",
-      "url": "https://pipebird.com/contact"
+      "name": "Book a demo",
+      "url": "https://calendly.com/pipebird"
     }
   ],
   "topbarCtaButton": {
@@ -24,9 +24,16 @@
   },
   "anchors": [
     {
-      "name": "API Reference",
-      "icon": "rectangle-terminal",
-      "url": "reference"
+      "name": "GitHub",
+      "icon": "github",
+      "color": "#333333",
+      "url": "https://github.com/Realize-Engineering/pipebird"
+    },
+    {
+      "name": "Contact Us",
+      "icon": "envelope",
+      "color": "#0284c7",
+      "url": "https://pipebird.com/contact"
     }
   ],
   "navigation": [
