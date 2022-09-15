@@ -30,6 +30,11 @@
       "url": "https://github.com/Realize-Engineering/pipebird"
     },
     {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://join.slack.com/t/pipebirdcommunity/shared_invite/zt-1emvmxdk6-jBc9qXDDgeLhinJ8ktOgHg"
+    },
+    {
       "name": "Contact Us",
       "icon": "envelope",
       "color": "#0284c7",
