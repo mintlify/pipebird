@@ -38,3 +38,21 @@ curl --request GET \
 ```
 
 </RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "content": [
+    {
+      "nickname": string,
+      "schema": string,
+      "database": string,
+      "status": "REACHABLE" | "UNREACHABLE",
+      "sourceType": "MYSQL" | "POSTGRES" | "SNOWFLAKE" | "REDSHIFT" | "BIGQUERY",
+    }
+  ]
+}
+```
+
+</ResponseExample>
