@@ -6,27 +6,26 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#1f93ff",
-    "light": "#45a5ff",
-    "dark": "#1174d1",
-    "ultraLight": "#87c5ff",
-    "ultraDark": "#095fb0"
+    "primary": "#5155D7",
+    "light": "#6D72F6",
+    "dark": "#3033A6",
+    "ultraLight": "#BCBCEF",
+    "ultraDark": "#070963"
   },
   "topbarLinks": [
     {
-      "name": "Example Link",
-      "url": "https://google.com"
+      "name": "Contact",
+      "url": "https://pipebird.com/contact"
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started Example",
-    "url": "https://google.com"
+    "name": "Login",
+    "url": "https://my.pipebird.com"
   },
   "anchors": [
     {
       "name": "API Reference",
       "icon": "rectangle-terminal",
-      "color": "#f59f0b",
       "url": "reference"
     }
   ],
