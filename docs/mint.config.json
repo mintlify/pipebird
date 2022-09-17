@@ -14,7 +14,7 @@
   },
   "api": {
     "auth": {
-      "method": "Bearer"
+      "method": "bearer"
     }
   },
   "topbarLinks": [
