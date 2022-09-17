@@ -1,33 +1,6 @@
 ---
-title: "List sources"
-description: "List all of your data sources"
-api: "GET http://localhost:3000/sources"
-auth: "bearer"
+openapi: "GET /sources"
 ---
-
-### Response
-
-<ResponseField name="content" type="array of objects">
-<Expandable title="Toggle object">
-
-<ResponseField name="nickname" type="string"></ResponseField>
-
-<ResponseField name="schema" type="string"></ResponseField>
-
-<ResponseField name="database" type="string"></ResponseField>
-
-<ResponseField name="status" type="string">
-  Either `REACHABLE` or `UNREACHABLE`
-</ResponseField>
-
-<ResponseField name="sourceType" type="string">
-
-`MYSQL`, `POSTGRES`, `SNOWFLAKE`, `REDSHIFT`, `BIGQUERY`
-
-</ResponseField>
-
-</Expandable>
-</ResponseField>
 
 <RequestExample>
 
