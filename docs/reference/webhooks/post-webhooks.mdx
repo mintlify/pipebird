@@ -1,29 +1,6 @@
 ---
-title: "Create webhook"
-description:
-  "Replaces any existing webhooks. An HMAC-SHA256 hash will be included in the
-  X-Pipebird-Signature header with all webhook requests and can be verified with
-  the webhook secret returned from this endpoint. You must store the secret
-  because you will not be able to read it later."
-api: "POST http://localhost:3000/webhooks"
-auth: "bearer"
+openapi: "POST /webhooks"
 ---
-
-### Body Params
-
-<ParamField body="url" type="string" required>
-
-</ParamField>
-
-### Response
-
-<ResponseField name="content" type="array of objects">
-<Expandable title="Toggle object">
-
-<ResponseField name="webhookSecret" type="string" request></ResponseField>
-
-</Expandable>
-</ResponseField>
 
 <RequestExample>
 

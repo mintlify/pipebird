@@ -1,27 +1,6 @@
 ---
-title: "List logs"
-description: "List event logs"
-api: "GET http://localhost:3000/logs"
-auth: "bearer"
+openapi: "GET /logs"
 ---
-
-### Response
-
-<ResponseField name="content" type="array of objects">
-<Expandable title="Toggle object">
-
-<ResponseField name="id" type="number"></ResponseField>
-
-<ResponseField name="eventAction" type="string"></ResponseField>
-
-<ResponseField name="eventSource" type="string"></ResponseField>
-
-<ResponseField name="eventId" type="number"></ResponseField>
-
-<ResponseField name="meta" type="string"></ResponseField>
-
-</Expandable>
-</ResponseField>
 
 <RequestExample>
 

@@ -1,33 +1,6 @@
 ---
-title: "List views"
-description: "List all materialized views"
-api: "GET http://localhost:3000/views"
-auth: "bearer"
+openapi: "GET /views"
 ---
-
-### Response
-
-<ResponseField name="content" type="array of objects">
-<Expandable title="Toggle object">
-
-<ResponseField name="id" type="number"></ResponseField>
-
-<ResponseField name="sourceId" type="number"></ResponseField>
-
-<ResponseField name="tableName" type="string"></ResponseField>
-
-<ResponseField name="columns" type="array of objects">
-<Expandable title="columns properties">
-
-<ResponseField name="id" type="number"></ResponseField>
-
-<ResponseField name="name" type="string"></ResponseField>
-
-<ResponseField name="dataType" type="string"></ResponseField>
-</Expandable>
-</ResponseField>
-</Expandable>
-</ResponseField>
 
 <RequestExample>
 

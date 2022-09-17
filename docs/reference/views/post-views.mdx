@@ -1,41 +1,6 @@
 ---
-title: "Create view"
-description: "Create a new view for a given source"
-api: "POST http://localhost:3000/views"
-auth: "bearer"
+openapi: "POST /views"
 ---
-
-### Body Params
-
-<ParamField body="sourceId" type="number" required></ParamField>
-
-<ParamField body="tableName" type="string" required></ParamField>
-
-<ParamField body="columns" type="array of objects"></ParamField>
-
-### Response
-
-<ResponseField name="content" type="array of objects">
-<Expandable title="Toggle object">
-
-<ResponseField name="id" type="number"></ResponseField>
-
-<ResponseField name="sourceId" type="number"></ResponseField>
-
-<ResponseField name="tableName" type="string"></ResponseField>
-
-<ResponseField name="columns" type="array of objects">
-<Expandable title="columns properties">
-
-<ResponseField name="id" type="number"></ResponseField>
-
-<ResponseField name="name" type="string"></ResponseField>
-
-<ResponseField name="dataType" type="string"></ResponseField>
-</Expandable>
-</ResponseField>
-</Expandable>
-</ResponseField>
 
 <RequestExample>
 
