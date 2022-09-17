@@ -12,6 +12,11 @@
     "ultraLight": "#BCBCEF",
     "ultraDark": "#070963"
   },
+  "api": {
+    "auth": {
+      "method": "Bearer"
+    }
+  },
   "topbarLinks": [
     {
       "name": "Book a demo",
