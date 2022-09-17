@@ -1,33 +1,6 @@
 ---
-title: "Update source"
-description: "Update source."
-api: "PATCH http://localhost:3000/sources/{source_id}"
-auth: "bearer"
+openapi: "PATCH /sources/{source_id}"
 ---
-
-### Path Params
-
-<ParamField path="source_id" type="string" required>
-  The id of this data source
-</ParamField>
-
-### Body Params
-
-<ParamField body="nickname" type="string"></ParamField>
-
-<ParamField body="sourceType" type="string" required></ParamField>
-
-<ParamField body="host" type="string"></ParamField>
-
-<ParamField body="port" type="string" required></ParamField>
-
-<ParamField body="schema" type="string"></ParamField>
-
-<ParamField body="database" type="string" required></ParamField>
-
-<ParamField body="username" type="string" required></ParamField>
-
-<ParamField body="password" type="string"></ParamField>
 
 <RequestExample>
 
